@@ -1,0 +1,16 @@
+
+func act() {
+    if !isBlocked {
+        moveForward()
+    }
+    if !isBlockedLeft {
+        turnLeft()
+    }
+    if isBlocked && isBlockedLeft {
+        turnRight()
+    }
+}
+while !isOnGem {
+    act()
+}
+collectGem()
